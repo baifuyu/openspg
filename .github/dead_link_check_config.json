@@ -1,0 +1,47 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^http://127.0.0.1"
+    },
+    {
+      "pattern": "^https://segmentfault.com/"
+    },
+    {
+      "pattern": "^https://console.cloud.tencent.com/cos/bucket"
+    },
+    {
+      "pattern": "^https://docs.buf.build/"
+    },
+    {
+      "pattern":"^https://techhenzy.com/proxy-webassembly-architecture/"
+    },
+    {
+      "pattern": "^#"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "http://localhost:3000/#/"
+    },
+    {
+      "pattern": "^zh/",
+      "replacement": "http://localhost:3000/#/zh/"
+    },
+    {
+      "pattern": "^en/",
+      "replacement": "http://localhost:3000/#/en/"
+    }
+  ],
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 2,
+  "fallbackRetryDelay": "10s",
+  "aliveStatusCodes": [
+    200,  
+    401
+  ]
+}
