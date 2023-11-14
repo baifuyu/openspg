@@ -1,4 +1,4 @@
-name: Layotto Env Pipeline 🌊
+name: OpenSPG Env Pipeline 🌊
 
 on:
   schedule:

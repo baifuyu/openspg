@@ -1,12 +1,12 @@
-name: Layotto Env Pipeline 🌊
+name: OpenSPG Env Pipeline 🌊
 
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   check:

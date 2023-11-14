@@ -1,4 +1,4 @@
-name: Layotto Dev Pipeline 🌊
+name: OpenSPG Dev Pipeline 🌊
 
 # Ignore some changes of commits:
 # 1. changes in .ci/
@@ -7,7 +7,7 @@ name: Layotto Dev Pipeline 🌊
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths-ignore:
       - 'docs/**'
       - '**/*.md'
