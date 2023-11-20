@@ -1,17 +1,19 @@
 ---
+
 name: "Good first issue (develop a java demo)"
 about: Submit a good first issue
 labels: ["kind/demo", "help wanted","good first issue","easy" ]
 title: "Develop a java demo for XXX API; 为 XXX API 开发一个 java demo"
 
 ---
+
 <!-- Please only use this template for submitting good first issues -->
 
 **What would you like to be added**:
 
 Develop a java demo for **(FIXME) XXX** API.
 
-Now we already have quickstart docs for this API, and we need a demo to show users how to invoke this API.  
+Now we already have quickstart docs for this API, and we need a demo to show users how to invoke this API.
 
 You can take the [lock api quickstart](https://mosn.io/layotto/#/en/start/lock/start) as an example:
 
@@ -23,7 +25,7 @@ The java demo of lock api is [here](https://github.com/layotto/java-sdk/tree/mai
 
 Here are some resources to help you work on this issue.
 
-Quickstart doc for this API: 
+Quickstart doc for this API:
 
 API definition (the .proto file):
 
