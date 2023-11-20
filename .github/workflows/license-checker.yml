@@ -1,0 +1,14 @@
+name: OpenSPG Env Pipeline 🌊
+
+on: [ pull_request ]
+
+jobs:
+    check:
+        name: "License Validation"
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v2
+            -   name: Check License Header
+                uses: apache/skywalking-eyes/header@main
+                with:
+                    log: info

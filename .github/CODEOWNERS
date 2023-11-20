@@ -1,0 +1,15 @@
+[SPG-Schema]
+/core/spgschema matthew.hyx@antgroup.com fuyu.bfy@antgroup.com
+
+[SPG-Reasoner]
+/core/spgschema donghai.ydh@antgroup.com fuyu.bfy@antgroup.com
+
+[SPG-Builder]
+/core/spgbuilder fuyu.bfy@antgroup.com
+
+[CloudExt]
+/core/spgbuilder fuyu.bfy@antgroup.com
+
+[KNext]
+/core/spgbuilder qy266141@antgroup.com matthew.hyx@antgroup.com
+
