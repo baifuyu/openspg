@@ -94,34 +94,9 @@
     <tugraph.client.version>1.4.1</tugraph.client.version>
   </properties>
 
-  <repositories>
-    <repository>
-      <id>osgeo</id>
-      <name>OSGeo Repository</name>
-      <url>https://repo.osgeo.org/repository/release/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>central</id>
-      <name>Maven Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
   <dependencyManagement>
     <dependencies>
-      <!-- openkgengine -->
+      <!-- openspg -->
       <dependency>
         <groupId>com.antgroup.openspg</groupId>
         <artifactId>common-util</artifactId>
@@ -292,7 +267,7 @@
         <artifactId>api-http-server</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <!-- /openkgengine -->
+      <!-- /openspg -->
 
       <dependency>
         <groupId>mysql</groupId>
@@ -621,6 +596,31 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>osgeo</id>
+      <name>OSGeo Repository</name>
+      <url>https://repo.osgeo.org/repository/release/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Maven Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
 
   <build>
     <plugins>
