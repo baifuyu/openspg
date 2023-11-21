@@ -255,9 +255,7 @@ public interface BaseLogAspect extends InitializingBean {
     return LoggerConstants.LOG_DEFAULT;
   }
 
-  /**
-   * @throws Exception
-   */
+  /** @throws Exception */
   @Override
   default void afterPropertiesSet() throws Exception {
     log.info("{} Init.", this.getClass().getName());

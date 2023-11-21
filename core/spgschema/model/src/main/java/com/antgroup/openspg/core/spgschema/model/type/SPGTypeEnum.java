@@ -16,29 +16,19 @@ package com.antgroup.openspg.core.spgschema.model.type;
 /** Type category in SPG framework. */
 public enum SPGTypeEnum {
 
-  /**
-   * @see BasicType
-   */
+  /** @see BasicType */
   BASIC_TYPE,
 
-  /**
-   * @see EntityType
-   */
+  /** @see EntityType */
   ENTITY_TYPE,
 
-  /**
-   * @see ConceptType
-   */
+  /** @see ConceptType */
   CONCEPT_TYPE,
 
-  /**
-   * @see EventType
-   */
+  /** @see EventType */
   EVENT_TYPE,
 
-  /**
-   * @see StandardType
-   */
+  /** @see StandardType */
   STANDARD_TYPE,
   ;
 
