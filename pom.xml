@@ -663,7 +663,6 @@
             <include>**/Test*.java</include>
           </includes>
           <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-          <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
       <plugin>
