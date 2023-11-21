@@ -605,9 +605,9 @@
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
-      <id>osgeo</id>
-      <name>OSGeo Repository</name>
-      <url>https://repo.osgeo.org/repository/release/</url>
+      <id>central</id>
+      <name>Maven Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
     </repository>
     <repository>
       <releases>
@@ -616,9 +616,9 @@
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
-      <id>central</id>
-      <name>Maven Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
+      <id>osgeo</id>
+      <name>OSGeo Repository</name>
+      <url>https://repo.osgeo.org/repository/release/</url>
     </repository>
   </repositories>
 
