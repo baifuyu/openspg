@@ -654,7 +654,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.1.2</version>
         <configuration>
-          <argLine>-Xmx1024m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m
+          <argLine>@{argLine} -Xmx1024m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m
             -Dfile.encoding=UTF-8</argLine>
           <includes>
             <include>**/*Test.groovy</include>
