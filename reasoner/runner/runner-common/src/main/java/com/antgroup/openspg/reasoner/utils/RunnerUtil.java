@@ -378,6 +378,20 @@ public class RunnerUtil {
     }
     vertexList.add(targetVertex);
     edgeProperty.put("nodes", vertexList);
+    if (CollectionUtils.isNotEmpty(edge.getEdgeList())) {
+      Object fromIdObj = edge.getEdgeList().get(0).getValue().get(Constants.EDGE_FROM_ID_KEY);
+      if (null != fromIdObj) {
+        edgeProperty.put(Constants.EDGE_FROM_ID_KEY, fromIdObj);
+      }
+      Object toIdObj =
+          edge.getEdgeList()
+              .get(edge.getEdgeList().size() - 1)
+              .getValue()
+              .get(Constants.EDGE_TO_ID_KEY);
+      if (null != toIdObj) {
+        edgeProperty.put(Constants.EDGE_TO_ID_KEY, toIdObj);
+      }
+    }
     return edgeProperty;
   }
 
@@ -714,13 +728,22 @@ public class RunnerUtil {
       pcSet.addAll(JavaConversions.setAsJavaSet(KgGraphSchema.getNeighborEdges(schema, alias)));
     }
     for (Connection pc : pcSet) {
-      Set<IVertexId> idSet =
-          edgeAlias2ValidTargetIdMap.computeIfAbsent(pc.alias(), k -> new HashSet<>());
+      Set<IVertexId> idSet = new HashSet<>();
+      boolean hasVertex = true;
       for (KgGraph<IVertexId> kgGraph : kgGraphList) {
-        List<IVertex<IVertexId, IProperty>> vList = kgGraph.getVertex(pc.target());
-        for (IVertex<IVertexId, IProperty> v : vList) {
+        KgGraphImpl kgGraphImpl = (KgGraphImpl) kgGraph;
+        Set<IVertex<IVertexId, IProperty>> vertexSet =
+            kgGraphImpl.getAlias2VertexMap().get(pc.target());
+        if (null == vertexSet) {
+          hasVertex = false;
+          break;
+        }
+        for (IVertex<IVertexId, IProperty> v : vertexSet) {
           idSet.add(v.getId());
         }
+      }
+      if (hasVertex) {
+        edgeAlias2ValidTargetIdMap.put(pc.alias(), idSet);
       }
     }
     return edgeAlias2ValidTargetIdMap;
