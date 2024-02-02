@@ -13,6 +13,7 @@
 
 package com.antgroup.openspg.builder.model.record;
 
+import com.antgroup.openspg.builder.model.record1.RecordAlterOperationEnum;
 import com.antgroup.openspg.server.common.model.base.BaseValObj;
 
 public class SPGRecordAlterItem extends BaseValObj {

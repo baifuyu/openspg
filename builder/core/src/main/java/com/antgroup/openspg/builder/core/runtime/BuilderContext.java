@@ -13,7 +13,7 @@
 
 package com.antgroup.openspg.builder.core.runtime;
 
-import com.antgroup.openspg.builder.model.record.RecordAlterOperationEnum;
+import com.antgroup.openspg.builder.model.record1.RecordAlterOperationEnum;
 import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;

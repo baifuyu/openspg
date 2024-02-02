@@ -11,7 +11,7 @@
  * or implied.
  */
 
-package com.antgroup.openspg.builder.model.record;
+package com.antgroup.openspg.builder.model.record1;
 
 /** <pp> Provides alter operation type for data record. </pp> */
 public enum RecordAlterOperationEnum {

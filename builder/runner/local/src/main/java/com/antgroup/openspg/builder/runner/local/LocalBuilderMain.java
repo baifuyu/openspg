@@ -25,7 +25,7 @@ import com.antgroup.openspg.builder.core.runtime.impl.DefaultBuilderCatalog;
 import com.antgroup.openspg.builder.model.BuilderJsonUtils;
 import com.antgroup.openspg.builder.model.exception.PipelineConfigException;
 import com.antgroup.openspg.builder.model.pipeline.Pipeline;
-import com.antgroup.openspg.builder.model.record.RecordAlterOperationEnum;
+import com.antgroup.openspg.builder.model.record1.RecordAlterOperationEnum;
 import com.antgroup.openspg.common.util.StringUtils;
 import com.antgroup.openspg.core.schema.model.SchemaException;
 import com.antgroup.openspg.core.schema.model.identifier.SPGTypeIdentifier;

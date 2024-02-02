@@ -12,7 +12,7 @@
   ~ or implied.
   -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -37,8 +37,11 @@
   <modules>
     <module>core</module>
     <module>model</module>
-    <module>runner/local</module>
     <module>testdata</module>
+    <module>catalog/common</module>
+    <module>catalog/openspg</module>
+    <module>runner/common</module>
+    <module>runner/local</module>
   </modules>
 
   <properties/>
@@ -47,7 +50,27 @@
     <dependencies>
       <dependency>
         <groupId>com.antgroup.openspg.builder</groupId>
+        <artifactId>builder-catalog-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.builder</groupId>
+        <artifactId>builder-catalog-openspg</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.builder</groupId>
         <artifactId>builder-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.builder</groupId>
+        <artifactId>builder-runner-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.builder</groupId>
+        <artifactId>builder-runner-local</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>

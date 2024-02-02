@@ -13,7 +13,7 @@
 
 package com.antgroup.openspg.cloudext.interfaces.graphstore;
 
-import com.antgroup.openspg.builder.model.record.RecordAlterOperationEnum;
+import com.antgroup.openspg.builder.model.record1.RecordAlterOperationEnum;
 import com.antgroup.openspg.builder.model.record.SPGRecordManipulateCmd;
 import com.antgroup.openspg.cloudext.interfaces.graphstore.adapter.record.SPGRecord2LPGService;
 import com.antgroup.openspg.cloudext.interfaces.graphstore.adapter.record.impl.SPGRecord2LPGServiceImpl;

@@ -13,7 +13,7 @@
 
 package com.antgroup.openspg.cloudext.interfaces.searchengine.cmd;
 
-import com.antgroup.openspg.builder.model.record.RecordAlterOperationEnum;
+import com.antgroup.openspg.builder.model.record1.RecordAlterOperationEnum;
 import com.antgroup.openspg.cloudext.interfaces.searchengine.model.idx.record.IdxRecord;
 import com.antgroup.openspg.cloudext.interfaces.searchengine.model.idx.record.IdxRecordAlterItem;
 import com.antgroup.openspg.server.common.model.base.BaseCmd;
