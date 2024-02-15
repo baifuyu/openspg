@@ -117,6 +117,15 @@ public class KgGraphLeftJoinImpl implements Serializable {
           result.add(newKgGraph);
           count++;
         }
+      } else {
+        // check join vertex is NoneVertex or not
+        if (1 == this.joinAliasSet.size() && this.joinNoneEdgeOrder.isEmpty()) {
+          IVertex<IVertexId, IProperty> leftJoinVertex =
+              leftKgGraph.getVertex(this.joinRootAlias).get(0);
+          if (leftJoinVertex instanceof NoneVertex) {
+            leftOuterJoinDone = false;
+          }
+        }
       }
       if (!leftOuterJoinDone) {
         RunnerUtil.kgGraphJoinNone(leftKgGraph, joinNoneEdgeOrder);
@@ -191,7 +200,7 @@ public class KgGraphLeftJoinImpl implements Serializable {
         if (edge instanceof OptionalEdge) {
           continue;
         }
-        String edgeKey = RunnerUtil.getEdgeIdentifier(edge, null);
+        String edgeKey = RunnerUtil.getEdgeIdentifier(edge);
         IEdge<IVertexId, IProperty> existEdge = selectMap.getOrDefault(edgeKey, null);
         if (null == existEdge || null == existEdge.getValue()) {
           selectMap.put(edgeKey, edge);
@@ -201,7 +210,7 @@ public class KgGraphLeftJoinImpl implements Serializable {
         if (edge instanceof OptionalEdge) {
           continue;
         }
-        String edgeKey = RunnerUtil.getEdgeIdentifier(edge, null);
+        String edgeKey = RunnerUtil.getEdgeIdentifier(edge);
         IEdge<IVertexId, IProperty> existEdge = selectMap.getOrDefault(edgeKey, null);
         if (null == existEdge || null == existEdge.getValue()) {
           selectMap.put(edgeKey, edge);
