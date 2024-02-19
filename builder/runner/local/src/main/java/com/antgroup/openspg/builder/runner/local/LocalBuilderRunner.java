@@ -19,7 +19,7 @@ import com.antgroup.openspg.builder.core.reason.ReasonProcessor;
 import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.core.runtime.BuilderExecutor;
 import com.antgroup.openspg.builder.core.runtime.BuilderRunner;
-import com.antgroup.openspg.builder.core.runtime.impl.DefaultBuilderExecutor;
+import com.antgroup.openspg.builder.core.runtime.impl.BuilderExecutorImpl;
 import com.antgroup.openspg.builder.model.exception.BuilderException;
 import com.antgroup.openspg.builder.model.exception.BuilderRecordException;
 import com.antgroup.openspg.builder.model.pipeline.Pipeline;
@@ -76,7 +76,7 @@ public class LocalBuilderRunner implements BuilderRunner {
     sinkWriter.init(context);
 
     PhysicalPlan physicalPlan = PhysicalPlan.plan(logicalPlan);
-    builderExecutor = new DefaultBuilderExecutor();
+    builderExecutor = new BuilderExecutorImpl();
     builderExecutor.init(physicalPlan, context);
 
     builderMetric = new BuilderMetric(context.getJobName());

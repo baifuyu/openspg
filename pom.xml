@@ -33,6 +33,7 @@
     <module>reasoner</module>
     <module>builder</module>
     <module>cloudext</module>
+    <module>common/catalog</module>
   </modules>
 
   <properties>

@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Set;
 import org.apache.commons.collections4.CollectionUtils;
 
-public class DefaultBuilderExecutor implements BuilderExecutor {
+public class BuilderExecutorImpl implements BuilderExecutor {
 
   private PhysicalPlan plan;
 
