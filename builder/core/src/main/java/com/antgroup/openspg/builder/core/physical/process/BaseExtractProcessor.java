@@ -17,7 +17,6 @@ import com.antgroup.openspg.builder.core.physical.operator.OperatorFactory;
 import com.antgroup.openspg.builder.core.physical.operator.PythonOperatorFactory;
 import com.antgroup.openspg.builder.core.physical.operator.protocol.InvokeResultWrapper;
 import com.antgroup.openspg.builder.core.physical.operator.protocol.PythonRecord;
-import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.model.exception.BuilderException;
 import com.antgroup.openspg.builder.model.pipeline.config.BaseExtractNodeConfig;
 import com.antgroup.openspg.builder.model.record.BaseRecord;

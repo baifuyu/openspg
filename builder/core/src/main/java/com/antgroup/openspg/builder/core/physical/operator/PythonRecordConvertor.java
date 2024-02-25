@@ -14,7 +14,6 @@
 package com.antgroup.openspg.builder.core.physical.operator;
 
 import com.antgroup.openspg.builder.core.physical.operator.protocol.PythonRecord;
-import com.antgroup.openspg.builder.core.runtime.BuilderCatalog;
 import com.antgroup.openspg.builder.core.strategy.linking.RecordLinking;
 import com.antgroup.openspg.builder.model.record.BaseAdvancedRecord;
 import com.antgroup.openspg.builder.model.record.RelationRecord;

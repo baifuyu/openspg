@@ -1,6 +1,5 @@
-package com.antgroup.openspg.builder.model.record1;
+package com.antgroup.openspg.builder.model.record;
 
-import com.antgroup.openspg.builder.model.record.BaseRecord;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

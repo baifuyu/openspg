@@ -13,7 +13,6 @@
 
 package com.antgroup.openspg.builder.core.strategy.fusing;
 
-import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.model.exception.BuilderException;
 import com.antgroup.openspg.builder.model.exception.FusingException;
 import com.antgroup.openspg.builder.model.pipeline.config.fusing.BaseFusingConfig;

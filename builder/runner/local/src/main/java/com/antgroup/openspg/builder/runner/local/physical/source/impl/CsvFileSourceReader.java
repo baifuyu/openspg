@@ -13,7 +13,6 @@
 
 package com.antgroup.openspg.builder.runner.local.physical.source.impl;
 
-import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.model.exception.BuilderException;
 import com.antgroup.openspg.builder.model.pipeline.config.CsvSourceNodeConfig;
 import com.antgroup.openspg.builder.model.record.BaseRecord;

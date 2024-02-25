@@ -14,7 +14,7 @@
 package com.antgroup.openspg.cloudext.interfaces.graphstore.adapter.record.impl.strategy;
 
 import com.antgroup.openspg.builder.model.record.BaseAdvancedRecord;
-import com.antgroup.openspg.builder.model.record1.RecordAlterOperationEnum;
+import com.antgroup.openspg.builder.model.record.RecordAlterOperationEnum;
 import com.antgroup.openspg.builder.model.record.SPGRecordAlterItem;
 import com.antgroup.openspg.builder.model.record.property.SPGPropertyRecord;
 import com.antgroup.openspg.cloudext.interfaces.graphstore.BaseLPGGraphStoreClient;

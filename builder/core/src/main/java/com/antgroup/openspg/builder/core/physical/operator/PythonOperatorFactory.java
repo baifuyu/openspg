@@ -13,7 +13,6 @@
 
 package com.antgroup.openspg.builder.core.physical.operator;
 
-import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.model.pipeline.config.OperatorConfig;
 import com.antgroup.openspg.common.util.StringUtils;
 import java.util.*;

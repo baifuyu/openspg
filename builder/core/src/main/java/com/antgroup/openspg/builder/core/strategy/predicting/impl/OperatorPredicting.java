@@ -18,7 +18,6 @@ import com.antgroup.openspg.builder.core.physical.operator.PythonOperatorFactory
 import com.antgroup.openspg.builder.core.physical.operator.PythonRecordConvertor;
 import com.antgroup.openspg.builder.core.physical.operator.protocol.InvokeResultWrapper;
 import com.antgroup.openspg.builder.core.physical.operator.protocol.PythonRecord;
-import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.core.strategy.linking.RecordLinking;
 import com.antgroup.openspg.builder.core.strategy.linking.RecordLinkingImpl;
 import com.antgroup.openspg.builder.core.strategy.predicting.PropertyPredicting;

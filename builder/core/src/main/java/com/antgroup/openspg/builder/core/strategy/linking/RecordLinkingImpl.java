@@ -13,7 +13,6 @@
 
 package com.antgroup.openspg.builder.core.strategy.linking;
 
-import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.core.strategy.linking.impl.BasicPropertyLinking;
 import com.antgroup.openspg.builder.core.strategy.linking.impl.IdEqualsLinking;
 import com.antgroup.openspg.builder.model.exception.BuilderException;

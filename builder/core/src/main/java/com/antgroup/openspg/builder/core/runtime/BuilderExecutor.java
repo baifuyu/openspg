@@ -24,7 +24,8 @@ import java.util.List;
  * processing is complete. The physical execution plan mentioned here does not include the source
  * and sink of the records.
  */
-public interface BuilderExecutor {
+public class BuilderExecutor {
+
   /**
    * Initialize the executor and initialize the physical execution plan. If an exception is thrown,
    * the builder process will not proceed further.

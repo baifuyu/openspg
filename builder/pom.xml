@@ -38,9 +38,6 @@
     <module>core</module>
     <module>model</module>
     <module>testdata</module>
-    <module>catalog/common</module>
-    <module>catalog/openspg</module>
-    <module>runner/common</module>
     <module>runner/local</module>
   </modules>
 

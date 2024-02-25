@@ -15,7 +15,6 @@ package com.antgroup.openspg.builder.core.reason.impl;
 
 import com.antgroup.openspg.builder.core.reason.ConceptReasoner;
 import com.antgroup.openspg.builder.core.reason.ReasonerProcessorUtils;
-import com.antgroup.openspg.builder.core.runtime.BuilderCatalog;
 import com.antgroup.openspg.builder.model.record.BaseAdvancedRecord;
 import com.antgroup.openspg.builder.model.record.BaseSPGRecord;
 import com.antgroup.openspg.builder.model.record.property.SPGPropertyRecord;

@@ -60,6 +60,10 @@
       <artifactId>builder-model</artifactId>
     </dependency>
     <dependency>
+      <groupId>com.antgroup.openspg</groupId>
+      <artifactId>common-catalog</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
     </dependency>

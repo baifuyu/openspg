@@ -13,7 +13,6 @@
 
 package com.antgroup.openspg.builder.core.reason;
 
-import com.antgroup.openspg.builder.core.runtime.BuilderCatalog;
 import com.antgroup.openspg.builder.model.record.BaseAdvancedRecord;
 import com.antgroup.openspg.builder.model.record.BaseSPGRecord;
 import com.antgroup.openspg.builder.model.record.RelationRecord;

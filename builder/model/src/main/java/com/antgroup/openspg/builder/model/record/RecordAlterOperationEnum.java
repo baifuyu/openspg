@@ -13,11 +13,10 @@
 
 package com.antgroup.openspg.builder.model.record;
 
-public enum SPGRecordTypeEnum {
-  ENTITY,
-  CONCEPT,
-  EVENT,
-  STANDARD,
-  RELATION,
-  ;
+/** <pp> Provides alter operation type for data record. </pp> */
+public enum RecordAlterOperationEnum {
+  /** If existed then update it, else insert it. */
+  UPSERT,
+  /** If existed then delete it. */
+  DELETE,
 }

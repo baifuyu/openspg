@@ -16,7 +16,6 @@ package com.antgroup.openspg.builder.runner.local;
 import com.antgroup.openspg.builder.core.logical.LogicalPlan;
 import com.antgroup.openspg.builder.core.physical.PhysicalPlan;
 import com.antgroup.openspg.builder.core.reason.ReasonProcessor;
-import com.antgroup.openspg.builder.core.runtime.BuilderContext;
 import com.antgroup.openspg.builder.core.runtime.BuilderExecutor;
 import com.antgroup.openspg.builder.core.runtime.BuilderRunner;
 import com.antgroup.openspg.builder.core.runtime.impl.BuilderExecutorImpl;

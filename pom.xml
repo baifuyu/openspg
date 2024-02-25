@@ -29,11 +29,11 @@
 
   <modules>
     <module>common/util</module>
+    <module>common/catalog</module>
     <module>server</module>
     <module>reasoner</module>
     <module>builder</module>
     <module>cloudext</module>
-    <module>common/catalog</module>
   </modules>
 
   <properties>
@@ -108,6 +108,11 @@
       <dependency>
         <groupId>com.antgroup.openspg</groupId>
         <artifactId>common-util</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg</groupId>
+        <artifactId>common-catalog</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
