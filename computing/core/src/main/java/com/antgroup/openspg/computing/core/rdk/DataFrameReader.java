@@ -2,7 +2,7 @@ package com.antgroup.openspg.computing.core.rdk;
 
 import com.antgroup.openspg.computing.core.SPGSession;
 import com.antgroup.openspg.computing.core.plans.QueryExecution;
-import com.antgroup.openspg.computing.core.plans.logical.DataSource;
+import com.antgroup.openspg.computing.core.plans.logical.SourceReader;
 
 public class DataFrameReader {
 
@@ -13,6 +13,6 @@ public class DataFrameReader {
   }
 
   public DataFrame csv(String path) {
-    return new DataFrame(new QueryExecution(spgSession, new DataSource()));
+    return new DataFrame(new QueryExecution(spgSession, new SourceReader(path)));
   }
 }

@@ -4,6 +4,8 @@ import com.antgroup.openspg.computing.core.conf.PatternConf;
 import com.antgroup.openspg.computing.core.plans.QueryExecution;
 import com.antgroup.openspg.computing.core.plans.logical.MapElements;
 import com.antgroup.openspg.computing.core.plans.logical.TypedFilter;
+import com.antgroup.openspg.computing.core.rdk.struct.SubGraph;
+
 import java.util.function.Function;
 
 public class GraphFrame extends Dataset<GraphFrame, SubGraph> {

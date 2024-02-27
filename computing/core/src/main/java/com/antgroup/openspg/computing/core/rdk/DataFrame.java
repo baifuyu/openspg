@@ -6,6 +6,8 @@ import com.antgroup.openspg.computing.core.plans.logical.LLMExtractor;
 import com.antgroup.openspg.computing.core.plans.logical.MapElements;
 import com.antgroup.openspg.computing.core.plans.logical.SPGMap;
 import com.antgroup.openspg.computing.core.plans.logical.TypedFilter;
+import com.antgroup.openspg.computing.core.rdk.struct.Row;
+
 import java.util.function.Function;
 
 public class DataFrame extends Dataset<DataFrame, Row> {

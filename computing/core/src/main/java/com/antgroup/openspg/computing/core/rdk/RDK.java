@@ -1,6 +1,8 @@
 package com.antgroup.openspg.computing.core.rdk;
 
 import com.antgroup.openspg.computing.core.conf.SaveConf;
+import com.antgroup.openspg.computing.core.rdk.struct.Row;
+
 import java.io.Serializable;
 import java.util.function.Function;
 
