@@ -19,11 +19,17 @@ public class GraphFrame extends Dataset<GraphFrame, SubGraph> {
 
   @Override
   public GraphFrame map(Function<SubGraph, SubGraph> func) {
-    return new GraphFrame(new QueryExecution(queryExecution.getSpgSession(), new MapElements(func)));
+    return new GraphFrame(
+        new QueryExecution(queryExecution.getSpgSession(), new MapElements(func)));
   }
 
   @Override
   public GraphFrame filter(Function<SubGraph, Boolean> func) {
-    return new GraphFrame(new QueryExecution(queryExecution.getSpgSession(), new TypedFilter(func)));
+    return new GraphFrame(
+        new QueryExecution(queryExecution.getSpgSession(), new TypedFilter(func)));
+  }
+
+  public GraphFrameWriter<SubGraph> write() {
+    return new GraphFrameWriter<>(this);
   }
 }

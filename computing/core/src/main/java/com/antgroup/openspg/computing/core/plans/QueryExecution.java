@@ -11,4 +11,5 @@ public class QueryExecution {
 
   private final SPGSession spgSession;
   private final LogicalPlan logicalPlan;
+
 }

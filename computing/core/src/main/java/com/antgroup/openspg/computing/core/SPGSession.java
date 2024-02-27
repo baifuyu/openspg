@@ -7,14 +7,8 @@ import java.io.Serializable;
 
 public class SPGSession implements Serializable, Closeable {
 
-  private final SPGRunner runner;
-
-  public SPGSession(SPGRunner runner) {
-    this.runner = runner;
-  }
-
   public DataFrameReader read() {
-    return runner.read(this);
+    return new DataFrameReader(this);
   }
 
   public SPGSessionBuilder builder() {

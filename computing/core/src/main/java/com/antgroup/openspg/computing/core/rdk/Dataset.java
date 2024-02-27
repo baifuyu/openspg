@@ -3,7 +3,9 @@ package com.antgroup.openspg.computing.core.rdk;
 import com.antgroup.openspg.computing.core.plans.QueryExecution;
 import java.io.Serializable;
 import java.util.function.Function;
+import lombok.Getter;
 
+@Getter
 public abstract class Dataset<T extends Dataset<T, X>, X> implements Serializable {
 
   protected final QueryExecution queryExecution;

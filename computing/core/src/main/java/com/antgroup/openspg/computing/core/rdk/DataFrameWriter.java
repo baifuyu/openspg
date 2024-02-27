@@ -1,6 +1,12 @@
 package com.antgroup.openspg.computing.core.rdk;
 
-public abstract class DataFrameWriter {
+public class DataFrameWriter<T> {
 
-  public abstract void csv(String path);
+  private final DataFrame df;
+
+  public DataFrameWriter(DataFrame df) {
+    this.df = df;
+  }
+
+  public void csv(String path) {}
 }
