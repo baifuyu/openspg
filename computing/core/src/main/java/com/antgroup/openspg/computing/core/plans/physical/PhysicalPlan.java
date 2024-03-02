@@ -6,9 +6,9 @@ import com.antgroup.openspg.computing.core.trees.TreeNode;
 
 public abstract class PhysicalPlan extends TreeNode<PhysicalPlan> {
 
-  public final RDK<Raw> execute() {
+  public final RDK<? extends Raw> execute() {
     return doExecute();
   }
 
-  protected abstract RDK<Raw> doExecute();
+  protected abstract RDK<? extends Raw> doExecute();
 }

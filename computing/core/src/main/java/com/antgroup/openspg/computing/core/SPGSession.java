@@ -1,6 +1,7 @@
 package com.antgroup.openspg.computing.core;
 
 import com.antgroup.openspg.computing.core.catalog.Catalog;
+import com.antgroup.openspg.computing.core.plans.SPGPlanner;
 import com.antgroup.openspg.computing.core.rdk.DataFrameReader;
 import java.io.Closeable;
 import java.io.IOException;
@@ -13,6 +14,8 @@ import lombok.Getter;
 public class SPGSession implements Serializable, Closeable {
 
   private final Catalog catalog;
+
+  private final SPGPlanner planner = new SPGPlanner();
 
   public DataFrameReader read() {
     return new DataFrameReader(this);

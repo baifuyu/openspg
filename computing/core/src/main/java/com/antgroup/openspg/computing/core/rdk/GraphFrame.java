@@ -2,10 +2,9 @@ package com.antgroup.openspg.computing.core.rdk;
 
 import com.antgroup.openspg.computing.core.conf.PatternConf;
 import com.antgroup.openspg.computing.core.plans.QueryExecution;
-import com.antgroup.openspg.computing.core.plans.logical.MapElements;
-import com.antgroup.openspg.computing.core.plans.logical.TypedFilter;
+import com.antgroup.openspg.computing.core.plans.logical.Filter;
+import com.antgroup.openspg.computing.core.plans.logical.Mapper;
 import com.antgroup.openspg.computing.core.rdk.struct.SubGraph;
-
 import java.util.function.Function;
 
 public class GraphFrame extends Dataset<GraphFrame, SubGraph> {
@@ -22,16 +21,16 @@ public class GraphFrame extends Dataset<GraphFrame, SubGraph> {
   @Override
   public GraphFrame map(Function<SubGraph, SubGraph> func) {
     return new GraphFrame(
-        new QueryExecution(queryExecution.getSpgSession(), new MapElements(func)));
+        new QueryExecution(qe.getSpgSession(), new Mapper(qe.getLogicalPlan(), func)));
   }
 
   @Override
   public GraphFrame filter(Function<SubGraph, Boolean> func) {
     return new GraphFrame(
-        new QueryExecution(queryExecution.getSpgSession(), new TypedFilter(func)));
+        new QueryExecution(qe.getSpgSession(), new Filter(qe.getLogicalPlan(), func)));
   }
 
-  public GraphFrameWriter<SubGraph> write() {
-    return new GraphFrameWriter<>(this);
+  public GraphFrameWriter write() {
+    return new GraphFrameWriter(this);
   }
 }

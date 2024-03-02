@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class SinkWriter extends LogicalPlan {
+public class GraphFrameSourceReader extends LogicalPlan {
 
-  private final LogicalPlan child;
+  private final String uri;
 }

@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class SourceReader extends LogicalPlan {
+public class DataFrameSourceReader extends LogicalPlan {
 
-  private final String path;
+  private final String uri;
 }

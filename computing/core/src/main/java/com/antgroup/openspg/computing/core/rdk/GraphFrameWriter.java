@@ -3,7 +3,7 @@ package com.antgroup.openspg.computing.core.rdk;
 import com.antgroup.openspg.computing.core.plans.QueryExecution;
 import com.antgroup.openspg.computing.core.plans.logical.SinkWriter;
 
-public class GraphFrameWriter<T> {
+public class GraphFrameWriter {
 
   private final GraphFrame gf;
 
@@ -12,7 +12,19 @@ public class GraphFrameWriter<T> {
   }
 
   public void csv(String path) {
-    QueryExecution qe = new QueryExecution(gf.queryExecution.getSpgSession(), new SinkWriter());
+    QueryExecution qe =
+        new QueryExecution(gf.qe.getSpgSession(), new SinkWriter(gf.qe.getLogicalPlan()));
     qe.execute();
+  }
+
+  public PostProcessor kg() {
+    return new PostProcessor();
+  }
+
+  public class PostProcessor {
+
+    public GraphFrameReasoner reason() {
+      return new GraphFrameReasoner(gf);
+    }
   }
 }

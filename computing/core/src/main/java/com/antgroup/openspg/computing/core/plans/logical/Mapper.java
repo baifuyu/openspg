@@ -6,7 +6,9 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class MapElements extends LogicalPlan {
+public class Mapper extends LogicalPlan {
+
+  private final LogicalPlan child;
 
   private final Function<?, ?> func;
 }

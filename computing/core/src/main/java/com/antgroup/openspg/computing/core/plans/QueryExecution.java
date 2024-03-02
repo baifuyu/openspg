@@ -13,12 +13,8 @@ public class QueryExecution {
   private final SPGSession spgSession;
   private final LogicalPlan logicalPlan;
 
-  public PhysicalPlan plan() {
-    return null;
-  }
-
   public void execute() {
-    PhysicalPlan physicalPlan = plan();
+    PhysicalPlan physicalPlan = spgSession.getPlanner().plan(logicalPlan);
     physicalPlan.execute();
   }
 }

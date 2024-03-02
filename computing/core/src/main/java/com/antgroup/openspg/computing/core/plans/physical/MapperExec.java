@@ -4,11 +4,9 @@ import com.antgroup.openspg.computing.core.rdk.RDK;
 import com.antgroup.openspg.computing.core.rdk.struct.Raw;
 import java.util.function.Function;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 
-@Getter
 @AllArgsConstructor
-public class FilterExec extends PhysicalPlan {
+public class MapperExec extends PhysicalPlan {
 
   private final PhysicalPlan child;
 
@@ -16,6 +14,6 @@ public class FilterExec extends PhysicalPlan {
 
   @Override
   protected RDK<? extends Raw> doExecute() {
-    return child.execute().filter(func);
+    return child.execute().map(func);
   }
 }

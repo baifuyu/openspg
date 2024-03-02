@@ -8,10 +8,10 @@ import lombok.Getter;
 @Getter
 public abstract class Dataset<T extends Dataset<T, X>, X> implements Serializable {
 
-  protected final QueryExecution queryExecution;
+  protected final QueryExecution qe;
 
-  public Dataset(QueryExecution queryExecution) {
-    this.queryExecution = queryExecution;
+  public Dataset(QueryExecution qe) {
+    this.qe = qe;
   }
 
   public abstract T map(Function<X, X> func);

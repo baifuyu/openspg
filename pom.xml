@@ -35,7 +35,6 @@
     <module>cloudext</module>
     <module>computing</module>
     <module>computing/core</module>
-    <module>computing/runner/local</module>
   </modules>
 
   <properties>
