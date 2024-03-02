@@ -1,3 +1,8 @@
 package com.antgroup.openspg.computing.core.conf;
 
-public class SPGMapConf {}
+import java.io.Serializable;
+
+public class SPGMapConf implements Serializable {
+
+    
+}

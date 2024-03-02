@@ -1,28 +1,32 @@
 package com.antgroup.openspg.computing.core.plans;
 
+import com.antgroup.openspg.computing.core.SPGSession;
 import com.antgroup.openspg.computing.core.plans.logical.*;
 import com.antgroup.openspg.computing.core.plans.physical.*;
 
-public class SPGPlanner {
+public class Planner {
 
-  public PhysicalPlan<?> plan(LogicalPlan plan) {
+  public PhysicalPlan plan(LogicalPlan plan, SPGSession spgSession) {
+    PhysicalPlan physicalPlan = null;
     if (plan instanceof DataFrameSourceReader) {
       DataFrameSourceReader reader = ((DataFrameSourceReader) plan);
-      return new DataFrameSourceReaderExec(reader.getUri());
+      physicalPlan = new DataFrameSourceReaderExec(reader.getUri());
     } else if (plan instanceof Mapper) {
       Mapper mapper = ((Mapper) plan);
-      return new MapperExec(plan(mapper.getChild()), mapper.getFunc());
+      physicalPlan = new MapperExec(plan(mapper.getChild(), spgSession), mapper.getFunc());
     } else if (plan instanceof Filter) {
       Filter filter = ((Filter) plan);
-      return new FilterExec(plan(filter.getChild()), filter.getFunc());
+      physicalPlan = new FilterExec(plan(filter.getChild(), spgSession), filter.getFunc());
     } else if (plan instanceof SPGMapper) {
       SPGMapper mapper = (SPGMapper) plan;
-      return new SPGMapperExec(plan(mapper.getChild()), mapper.getConf());
+      physicalPlan = new SPGMapperExec(plan(mapper.getChild(), spgSession), mapper.getConf());
     } else if (plan instanceof SinkWriter) {
       SinkWriter writer = (SinkWriter) plan;
-      return new SinkWriterExec(plan(writer.getChild()));
+      physicalPlan = new SinkWriterExec(plan(writer.getChild(), spgSession));
     } else {
       throw new RuntimeException("unknown plan=" + plan.getClass().getSimpleName());
     }
+    physicalPlan.setSpgSession(spgSession);
+    return physicalPlan;
   }
 }

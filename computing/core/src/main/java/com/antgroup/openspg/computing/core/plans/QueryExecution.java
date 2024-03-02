@@ -14,7 +14,7 @@ public class QueryExecution {
   private final LogicalPlan logicalPlan;
 
   public void execute() {
-    PhysicalPlan physicalPlan = spgSession.getPlanner().plan(logicalPlan);
+    PhysicalPlan physicalPlan = spgSession.getPlanner().plan(logicalPlan, spgSession);
     physicalPlan.execute();
   }
 }

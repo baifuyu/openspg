@@ -33,4 +33,8 @@ public class GraphFrame extends Dataset<GraphFrame, SubGraph> {
   public GraphFrameWriter write() {
     return new GraphFrameWriter(this);
   }
+
+  public GraphFrameReasoner reason() {
+    return new GraphFrameReasoner(this);
+  }
 }

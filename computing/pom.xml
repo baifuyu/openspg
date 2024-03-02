@@ -20,5 +20,8 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  <modules>
+    <module>runner/local</module>
+  </modules>
 
 </project>

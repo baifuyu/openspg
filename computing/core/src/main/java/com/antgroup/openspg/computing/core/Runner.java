@@ -3,10 +3,13 @@ package com.antgroup.openspg.computing.core;
 import com.antgroup.openspg.computing.core.rdk.RDK;
 import com.antgroup.openspg.computing.core.rdk.struct.Row;
 import com.antgroup.openspg.computing.core.rdk.struct.SubGraph;
+import lombok.Setter;
 
-public abstract class SPGRunner {
+public abstract class Runner {
 
-  public abstract RDK<Row> createDataFrame();
+  @Setter protected SPGSession spgSession;
+
+  public abstract RDK<Row> createDataFrame(String uri);
 
   public abstract void saveDataFrame();
 

@@ -17,8 +17,7 @@ public class GraphFrameWriter {
     qe.execute();
   }
 
-  public PostProcessor kg() {
-    return new PostProcessor();
+  public void reason(String path) {
   }
 
   public class PostProcessor {
