@@ -13,7 +13,6 @@ public class GraphFrame extends Dataset<GraphFrame, SubGraph> {
     super(queryExecution);
   }
 
-  /** 在进行这个之前，就不是iter形式了，就应该全部在内存了 */
   public GraphFrame patternMatch(PatternConf conf) {
     return null;
   }

@@ -2,7 +2,9 @@ package com.antgroup.openspg.computing.runner.local;
 
 import com.antgroup.openspg.computing.core.SPGSession;
 import com.antgroup.openspg.computing.core.catalog.Catalog;
+import com.antgroup.openspg.computing.core.conf.SPGMapConf;
 import com.antgroup.openspg.computing.core.rdk.DataFrame;
+import org.apache.commons.lang3.StringUtils;
 
 public class Main {
 
@@ -14,15 +16,17 @@ public class Main {
             .catalog(Catalog.builder().build())
             .getOrCreate();
 
-    DataFrame dataFrame = spgSession.read().csv("xxx.csv");
+    DataFrame dataFrame = spgSession.read().csv("input.csv");
 
     dataFrame
-        .map(x -> x)
-        .spgMap(null)
-        .patternMatch(null)
+        .filter(row -> StringUtils.isNotBlank(row.getAs("name")))
+        .spgMap(
+            SPGMapConf.mappingTo("RiskMining.Person")
+                .addPropertyMapping(new SPGMapConf.MappingPair("id", "id"))
+                .addPropertyMapping(new SPGMapConf.MappingPair("name", "name")))
         .filter(subGraph -> true)
         .write()
-        .csv("xxxxx");
+        .csv("file://output.csv");
   }
 
   public static void testcase2() {
@@ -36,7 +40,7 @@ public class Main {
     DataFrame dataFrame = spgSession.read().csv("xxx.csv");
 
     dataFrame
-        .map(x -> x)
+        .map(row -> row)
         .spgMap(null)
         .patternMatch(null)
         .filter(subGraph -> true)

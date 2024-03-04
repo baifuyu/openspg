@@ -1,7 +1,6 @@
 package com.antgroup.openspg.computing.core;
 
 import com.antgroup.openspg.computing.core.catalog.Catalog;
-import com.antgroup.openspg.computing.core.plans.Planner;
 import com.antgroup.openspg.computing.core.rdk.DataFrameReader;
 import java.io.Closeable;
 import java.io.IOException;
@@ -16,8 +15,6 @@ public class SPGSession implements Serializable, Closeable {
   private final Catalog catalog;
 
   private final Runner runner;
-
-  private final Planner planner = new Planner();
 
   public DataFrameReader read() {
     return new DataFrameReader(this);

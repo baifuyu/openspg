@@ -2,7 +2,6 @@ package com.antgroup.openspg.computing.core.rdk;
 
 import com.antgroup.openspg.computing.core.SPGSession;
 import com.antgroup.openspg.computing.core.plans.QueryExecution;
-import com.antgroup.openspg.computing.core.plans.logical.GraphFrameSourceReader;
 
 public class GraphFrameReader {
 

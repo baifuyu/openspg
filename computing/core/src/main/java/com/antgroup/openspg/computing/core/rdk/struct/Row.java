@@ -12,5 +12,9 @@ public interface Row extends Raw {
 
   StructType schema();
 
-  Object get(int i);
+  Object get(int idx);
+
+  <T> T getAs(int idx);
+
+  <T> T getAs(String fieldName);
 }

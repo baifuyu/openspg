@@ -1,7 +1,6 @@
 package com.antgroup.openspg.computing.core.rdk.struct;
 
 import com.antgroup.openspg.computing.core.catalog.types.SPGType;
-import java.util.List;
 
 public interface SubGraph extends Raw {
 
@@ -9,7 +8,7 @@ public interface SubGraph extends Raw {
 
   String subject();
 
-  List<SPO> relations();
+  <T> T getPropertyValue(String pName);
 
-  List<SPO> properties();
+  <T> T getRelationValue(String pName);
 }
